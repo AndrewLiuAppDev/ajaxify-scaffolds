@@ -14,9 +14,11 @@
     </tr>
   </thead>
 
+  <%= render "movies/form", movie: @movies.build %></td>
+
   <tbody>
     <% @movies.each do |movie| %>
-      <tr>
+      <tr id="<%= dom_id(movie) %>">
         <td><%= movie.title %></td>
         <td><%= movie.description %></td>
         <td><%= movie.duration %></td>
@@ -31,5 +33,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Movie', new_movie_path %>
