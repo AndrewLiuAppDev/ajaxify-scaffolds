@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :actors
   resources :directors
   resources :movies
+  resources :titles
 end
